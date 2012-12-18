@@ -1,0 +1,23 @@
+global:
+  env:
+    - BOT_NAME: panda
+
+web1:
+  name: front1
+  document_root: public
+  php_version: 5.3.10
+  php_extensions:
+    - apc
+    - pdo_mysql
+    - zip
+    - timezonedb
+    - mbstring
+
+db1:
+  name: phergie
+  type: mysql
+
+worker1:
+  name: phergie
+  type: php
+  exec: php phergie.php
